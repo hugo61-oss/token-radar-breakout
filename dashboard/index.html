@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakout Radar — pre-token protocols ranked by volume breakout</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="shell">
+  <header class="masthead">
+    <div class="radar-mark" aria-hidden="true"><span class="sweep"></span><span class="blip b1"></span><span class="blip b2"></span></div>
+    <div class="mast-text">
+      <h1>Breakout Radar</h1>
+      <p class="tagline">Token launch radar, ranked by volume breakout — the protocols whose TVL is moving now, and what a launch would be worth.</p>
+    </div>
+    <div class="mast-meta" id="mast-meta"></div>
+  </header>
+
+  <section class="ticker" id="ticker" aria-label="Breaking out now"></section>
+
+  <section class="controls" id="controls">
+    <input id="q" type="search" placeholder="Search a protocol…" autocomplete="off" aria-label="Search protocols">
+    <select id="tier" aria-label="Breakout tier">
+      <option value="">All tiers</option>
+      <option>BREAKOUT</option>
+      <option>HEATING</option>
+      <option>STEADY</option>
+      <option>COOLING</option>
+      <option>UNRATED</option>
+    </select>
+    <select id="cat" aria-label="Category"><option value="">All categories</option></select>
+    <select id="chain" aria-label="Chain"><option value="">All chains</option></select>
+    <select id="sort" aria-label="Sort by">
+      <option value="value">Sort: implied value</option>
+      <option value="tvl">Sort: TVL</option>
+      <option value="chg">Sort: 7-day change</option>
+      <option value="score">Sort: breakout score</option>
+      <option value="age">Sort: age</option>
+    </select>
+    <label class="check"><input id="watch" type="checkbox"> Watchlist only</label>
+  </section>
+  <p class="count" id="count"></p>
+
+  <main id="view"></main>
+
+  <section class="live" id="live"></section>
+
+  <footer class="method" id="method"></footer>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
